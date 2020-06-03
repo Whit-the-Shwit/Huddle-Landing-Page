@@ -1,0 +1,113 @@
+/* Elements */
+body {
+  background-color: #6648B1;
+  background-image: url("../images/bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6rem;
+  padding: 5%;
+  text-align: left;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 2.8rem;
+}
+
+/* Desktop Version */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "a a . ."
+    "b b c c"
+    ". . . d";
+}
+
+.logo {
+  grid-area: a;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.logo-img {
+  width: 40%;
+}
+
+.mockup {
+  grid-area: b;
+  padding: 50px 0;
+}
+
+.mockup-img {
+  width: 100%;
+}
+
+.information {
+  grid-area: c;
+  align-items: center;
+  padding: 75px 40px;
+}
+
+.btn {
+  border: 1px solid black;
+  border-radius: 30px;
+  color: #6648B1;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 90px;
+  margin-top: 25px;
+  font-size: 1.2rem;
+}
+
+.icons {
+  grid-area: d;
+  text-align: right;
+}
+
+.fab {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 30px 5px;
+}
+
+/* mobile version */
+@media (max-width: 500px) {
+  body {
+    background-image: url("../images/bg-mobile.svg");
+    background-position: top;
+    background-size: auto;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .logo-img {
+    width: 50%;
+  }
+
+  .mockup {
+    padding: 0;
+  }
+
+  .information {
+    padding: 0;
+  }
+
+  .icons {
+    text-align: center;
+    margin: 30px auto;
+  }
+}
